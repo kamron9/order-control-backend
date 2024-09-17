@@ -14,9 +14,6 @@ app.use(express.json())
 // Routerlardan foydalanish
 app.use('/api', orderRoutes)
 
-// Namuna buyurtmalarni qo'shish
-insertSampleOrders()
-
 const PORT = 5000
 async function start() {
 	try {
