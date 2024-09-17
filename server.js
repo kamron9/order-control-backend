@@ -12,7 +12,7 @@ connectDB()
 app.use(express.json())
 
 // Routerlardan foydalanish
-app.use('api', orderRoutes)
+app.use('/api', orderRoutes)
 
 // Namuna buyurtmalarni qo'shish
 insertSampleOrders()
