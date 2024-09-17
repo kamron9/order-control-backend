@@ -10,7 +10,7 @@ const generateOrderId = async () => {
 }
 
 // Buyurtma qo'shish
-router.post('/', async (req, res) => {
+router.post('/orders', async (req, res) => {
 	try {
 		const { productTitle, price, status, paymentType, count, details } =
 			req.body
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
 })
 
 // Buyurtmalarni olish
-router.get('/', async (req, res) => {
+router.get('/orders', async (req, res) => {
 	try {
 		const orders = await Order.find()
 		res.status(200).json(orders)
