@@ -17,14 +17,14 @@ app.use(cors())
 // Routerlardan foydalanish
 app.use('/api', orderRoutes)
 
-const PORT = 5000
+const PORT = process.env.PORT || 5000
 async function start() {
 	try {
 		app.listen(PORT, () => {
 			console.log(`Server is running on port ${PORT}`)
 		})
 	} catch (error) {
-		console.error('Server error:', error)
+		console.error('Error starting server:', error)
 		process.exit(1)
 	}
 }
