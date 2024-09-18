@@ -9,7 +9,6 @@ const app = express()
 
 // MongoDB ulanishi
 connectDB()
-// insertSampleOrders()
 
 app.use(express.json())
 app.use(cors())
