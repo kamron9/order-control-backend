@@ -2,14 +2,17 @@
 const express = require('express')
 const connectDB = require('./config/db')
 const orderRoutes = require('./routes/orders')
-const insertSampleOrders = require('./data/sampleOrders')
+const cors = require('cors')
+// const insertSampleOrders = require('./data/sampleOrders')
 
 const app = express()
 
 // MongoDB ulanishi
 connectDB()
+// insertSampleOrders()
 
 app.use(express.json())
+app.use(cors())
 
 // Routerlardan foydalanish
 app.use('/api', orderRoutes)
