@@ -8,6 +8,7 @@ const connectDB = async () => {
 			{
 				useNewUrlParser: true,
 				useUnifiedTopology: true,
+				serverSelectionTimeoutMS: 5000,
 			}
 		)
 		console.log('MongoDB connected')
